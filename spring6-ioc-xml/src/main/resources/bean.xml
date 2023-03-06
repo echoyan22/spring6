@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="top.echoyan0924.spring6.iocxml.User">
+
+    </bean>
+
+    <bean id="userDaoImpl" class="top.echoyan0924.spring6.iocxml.dao.UserDaoImpl">
+
+    </bean>
+
+<!--    <bean id="personDaoImpl" class="top.echoyan0924.spring6.iocxml.dao.PersonDaoImpl">-->
+<!--        -->
+<!--    </bean>-->
+
+    <!-- setter注入-->
+    <bean id="student" class="top.echoyan0924.spring6.iocxml.di.Student">
+        <property name="id" value="1" ></property>
+        <property name="age" value="23"></property>
+        <property name="name" value="echo"></property>
+        <property name="sex" value="男"></property>
+    </bean>
+
+    <!--构造器注入 -->
+    <bean id="student1" class="top.echoyan0924.spring6.iocxml.di.Student">
+        <constructor-arg name="id" value="2"></constructor-arg>
+        <constructor-arg name="age" value="23"></constructor-arg>
+        <constructor-arg name="name" value="echo"></constructor-arg>
+        <constructor-arg name="sex" value="男"></constructor-arg>
+    </bean>
+
+</beans>
